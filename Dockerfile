@@ -39,4 +39,8 @@ ADD		srcs/conf/config.inc.php ${SHARED}/html/phpmyadmin/
 RUN		chmod 660 ${SHARED}/html/phpmyadmin/config.inc.php
 RUN		chown -R www-data:www-data ${SHARED}/html/phpmyadmin
 
+EXPOSE	80
+EXPOSE	443
+EXPOSE	3306
+
 CMD		[ "/bin/bash", "root/boot.sh" ]
