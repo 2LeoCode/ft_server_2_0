@@ -33,7 +33,6 @@ RUN		chown -R www-data:www-data /var/www/ft_server/html/wordpress/
 RUN		chmod 755 ${SHARED}/html/wordpress
 ADD		srcs/conf/wp-config.php ${SHARED}/html/wordpress
 RUN		rm -f ${SHARED}/html/wordpress/wp-config-sample.php
-RUN		ln -s ${SHARED}/html/wordpress/index.php ${SHARED}/html/
 
 RUN 	mv phpMyAdmin-4.9.0.1-english ${SHARED}/html/phpmyadmin && rm -f ${SHARED}/html/phpmyadmin/config.sample.inc.php
 ADD		srcs/conf/config.inc.php ${SHARED}/html/phpmyadmin/

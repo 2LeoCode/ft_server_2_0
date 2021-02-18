@@ -5,7 +5,6 @@ then
 	sed -i 's/autoindex on/autoindex '$NGINX_AUTOINDEX'/g' /etc/nginx/sites-enabled/ft_server.conf
 fi
 
-nginx -t
 service nginx start
 service php7.3-fpm start
 
